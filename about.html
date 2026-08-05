@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | NeoInsight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Neo<span class="dot">Insight</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="pagehead reveal">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h1>Who we are</h1>
+  </div>
+</section>
+
+<section class="block reveal" style="border-top:none;">
+  <div class="wrap">
+    <p class="lead-text">
+      <b>NeoInsight</b> is a student-led consulting initiative founded by two students from Shri Ram College of Commerce who are deeply interested in building and working with startups. We work alongside companies to bring greater clarity and structure to strategic decision-making &mdash; understanding the core problem, analysing the context in depth, and translating insights into well-defined, actionable directions that support growth. Our focus is on being <b>useful</b>, <b>realistic</b>, and aligned with how organisations actually operate on the ground.
+    </p>
+  </div>
+</section>
+
+<section class="block reveal">
+  <div class="wrap">
+    <div class="block-label">Founding Team</div>
+    <ul class="team-list">
+      <li class="team-item">
+        <div class="avatar">HG</div>
+        <div>
+          <h3>Hariom Gupta</h3>
+          <p>2nd year student at Shri Ram College of Commerce. Co-founded RunClub SRCC, scaling it into a 500+ member community. As a NISM-certified Research Analyst, brings a structured &amp; analytical approach to solving real-world business problems.</p>
+        </div>
+      </li>
+      <li class="team-item">
+        <div class="avatar">JA</div>
+        <div>
+          <h3>Janvi Agrawal</h3>
+          <p>2nd year student at Shri Ram College of Commerce and a CA Intermediate candidate. Worked as a Live Project Associate at UBON, contributing to marketing strategy development. Passionate about startups and strategy building.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>NeoInsight &middot; Shri Ram College of Commerce</div>
+    <div><a href="mailto:info@neoinsight.in">info@neoinsight.in</a></div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  document.getElementById('navlist').classList.toggle('open');
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

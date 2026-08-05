@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | NeoInsight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Neo<span class="dot">Insight</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="pagehead reveal">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h1>How we work with founders</h1>
+  </div>
+</section>
+
+<section class="block reveal" style="border-top:none;">
+  <div class="wrap">
+
+    <div class="service-block">
+      <div class="service-head"><span class="snum">01</span><h3>Market Research</h3></div>
+      <ul>
+        <li>Conduct primary and secondary research to understand the industry landscape.</li>
+        <li>Analyse market trends, customer behaviour, and competitor positioning.</li>
+        <li>Deliver actionable insights that support market entry, validation, and growth decisions.</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-head"><span class="snum">02</span><h3>Strategy Consulting</h3></div>
+      <ul>
+        <li>Design practical go-to-market strategies aligned with business stage and resources.</li>
+        <li>Diagnose retention, feature, and monetisation gaps to identify sustainable growth levers.</li>
+        <li>Deliver structured, implementable roadmaps with clear priorities and revenue direction.</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-head"><span class="snum">03</span><h3>Data Analysis &amp; Interpretation</h3></div>
+      <ul>
+        <li>Analyse quantitative and qualitative data to identify key patterns.</li>
+        <li>Build dashboards and tracking frameworks for performance visibility.</li>
+        <li>Translate data into clear business implications and decision support.</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="service-head"><span class="snum">04</span><h3>Strategic Perspective</h3></div>
+      <ul>
+        <li>Provide an objective external view to identify blind spots.</li>
+        <li>Challenge assumptions with structured, analytical thinking.</li>
+        <li>Deliver practical insights that support stronger decision-making.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>NeoInsight &middot; Shri Ram College of Commerce</div>
+    <div><a href="mailto:info@neoinsight.in">info@neoinsight.in</a></div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  document.getElementById('navlist').classList.toggle('open');
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | NeoInsight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Neo<span class="dot">Insight</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-block reveal">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Let's turn insights into action together.</h2>
+    <p>Reach out to discuss research, strategy, or a potential project.</p>
+    <a class="contact-email" href="mailto:info@neoinsight.in">info@neoinsight.in</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>NeoInsight &middot; Shri Ram College of Commerce</div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  document.getElementById('navlist').classList.toggle('open');
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

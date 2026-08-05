@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoInsight | Research &amp; Strategy Practice</title>
+<meta name="description" content="NeoInsight is a student-led research and strategy practice supporting early-stage startups.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Neo<span class="dot">Insight</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="pagehead reveal">
+  <div class="wrap">
+    <div class="eyebrow">Research &amp; Strategy Practice</div>
+    <h1>Clarity and structure for early-stage decisions.</h1>
+    <p class="sub">NeoInsight works alongside startup founders to understand the core problem, analyse the context in depth, and translate insights into well-defined, actionable directions that support growth.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Get in touch</a>
+      <a class="btn btn-ghost" href="projects.html">View our work</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap reveal">
+  <div class="stat-strip">
+    <div class="stat">
+      <div class="n">₹1.5L+</div>
+      <div class="l">Revenue delivered for startup clients</div>
+    </div>
+    <div class="stat">
+      <div class="n">6</div>
+      <div class="l">Startup projects completed</div>
+    </div>
+  </div>
+</div>
+
+<section class="block reveal">
+  <div class="wrap">
+    <div class="block-label">What We Do</div>
+    <ul class="practice-list">
+      <li class="practice-item">
+        <span class="pnum">01</span>
+        <div>
+          <h3>Market Research</h3>
+          <p>Primary and secondary research to understand the industry landscape, customer behaviour, and competitor positioning.</p>
+        </div>
+      </li>
+      <li class="practice-item">
+        <span class="pnum">02</span>
+        <div>
+          <h3>Strategy Consulting</h3>
+          <p>Practical go-to-market strategies and structured, implementable roadmaps with clear priorities.</p>
+        </div>
+      </li>
+      <li class="practice-item">
+        <span class="pnum">03</span>
+        <div>
+          <h3>Data Analysis &amp; Interpretation</h3>
+          <p>Turning quantitative and qualitative data into clear business implications and decision support.</p>
+        </div>
+      </li>
+      <li class="practice-item">
+        <span class="pnum">04</span>
+        <div>
+          <h3>Strategic Perspective</h3>
+          <p>An objective external view that challenges assumptions and identifies blind spots.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>NeoInsight &middot; Shri Ram College of Commerce</div>
+    <div><a href="mailto:info@neoinsight.in">info@neoinsight.in</a></div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  document.getElementById('navlist').classList.toggle('open');
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

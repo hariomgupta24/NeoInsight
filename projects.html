@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | NeoInsight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Neo<span class="dot">Insight</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="pagehead reveal">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h1>Engagements</h1>
+    <p class="sub">Research and strategy work delivered directly with startup founders.</p>
+  </div>
+</section>
+
+<section class="block reveal" style="border-top:none;">
+  <div class="wrap">
+    <ul class="case-list">
+      <li class="case-item">
+        <div class="case-logo"><img src="assets/logo_yodley.png" alt="Yodley"></div>
+        <div class="case-desc"><b>Yodley</b> &mdash; Strategy and research support.</div>
+      </li>
+      <li class="case-item">
+        <div class="case-logo"><img src="assets/logo_bubbleme.png" alt="Bubble Me"></div>
+        <div class="case-desc"><b>Bubble Me</b> &mdash; Go-to-market and product research for a new category entry.</div>
+      </li>
+      <li class="case-item">
+        <div class="case-logo"><img src="assets/logo_jaggercane.png" alt="Jaggercane"></div>
+        <div class="case-desc"><b>Jaggercane</b> &mdash; Strategy and research support.</div>
+      </li>
+    </ul>
+    <p class="case-count">6 startup projects completed in total.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>NeoInsight &middot; Shri Ram College of Commerce</div>
+    <div><a href="mailto:info@neoinsight.in">info@neoinsight.in</a></div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function(){
+  document.getElementById('navlist').classList.toggle('open');
+});
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
